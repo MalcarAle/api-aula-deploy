@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get("/carros", async (req, res) => {
+app.get("/", async (req, res) => {
   const carros = await knex("carros")
 
   return res.json(carros)
